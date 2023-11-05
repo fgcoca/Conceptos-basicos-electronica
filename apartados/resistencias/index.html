@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://fgcoca.github.io/Conceptos-basicos-electronica/apartados/resistencias/">
       
       
-        <link rel="prev" href="../cables_conn/">
+        <link rel="prev" href="../ohm/">
       
       
-        <link rel="next" href="../../Miscelanea/about/">
+        <link rel="next" href="../semi_disc/">
       
       
       <link rel="icon" href="../../img/favicon.png">
@@ -409,6 +409,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../ohm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ley de Ohm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -416,6 +436,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -445,6 +467,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -453,8 +477,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resistencias" class="md-nav__link">
-    Resistencias
+  <a href="#resistencias-fijas" class="md-nav__link">
+    Resistencias fijas
+  </a>
+  
+    <nav class="md-nav" aria-label="Resistencias fijas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-bandas" class="md-nav__link">
+    4 bandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-bandas" class="md-nav__link">
+    5 bandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-bandas" class="md-nav__link">
+    6 bandas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-potenciometro" class="md-nav__link">
+    El potenciómetro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resistencia-ldr" class="md-nav__link">
+    Resistencia LDR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-termistor" class="md-nav__link">
+    El termistor
   </a>
   
 </li>
@@ -463,6 +535,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semi_disc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semiconductores discretos
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -618,6 +710,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -626,8 +720,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resistencias" class="md-nav__link">
-    Resistencias
+  <a href="#resistencias-fijas" class="md-nav__link">
+    Resistencias fijas
+  </a>
+  
+    <nav class="md-nav" aria-label="Resistencias fijas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-bandas" class="md-nav__link">
+    4 bandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-bandas" class="md-nav__link">
+    5 bandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-bandas" class="md-nav__link">
+    6 bandas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-potenciometro" class="md-nav__link">
+    El potenciómetro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resistencia-ldr" class="md-nav__link">
+    Resistencia LDR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-termistor" class="md-nav__link">
+    El termistor
   </a>
   
 </li>
@@ -647,9 +789,173 @@
                   
 
 
-  <h1>Resistencias</h1>
-
-<h2 id="resistencias"><FONT COLOR=#007575><strong>Resistencias</strong></font><a class="headerlink" href="#resistencias" title="Permanent link">&para;</a></h2>
+<h1 id="resistencias"><FONT COLOR=#8B008B>Resistencias</font><a class="headerlink" href="#resistencias" title="Permanent link">&para;</a></h1>
+<p>La resistencia eléctrica es la oposición o dificultad que un circuito ofrece al paso de la corriente eléctrica. Cuanto mas se opone el elemento mayor es su resistencia.</p>
+<p>Para su representación en circuito se utilizan los śimbolos siguientes:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/simbolos.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Símbolos de resistencia" src="../../img/apartados/resistencias/simbolos.png" /></a><br />
+<em>Símbolos de resistencia</em></p>
+<p></center></p>
+<p>La resistencia se relaciona con otras magnitudes eléctricas a través de la <a href="../ohm/">ley de Ohm</a>.</p>
+<p>La resistencia de un conductor, cuando se trata de longitudes de conductor largas, no se puede calcular por la ley de Ohm, aplicandose la siguiente ecuación:</p>
+<p><center><span class="arithmatex">\(R = \rho \dfrac{l}{S}\)</span></center></p>
+<p>Donde:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> - <span class="arithmatex">\(\rho\)</span> es la resistividad del conductor expresada en <span class="arithmatex">\(\Omega \cdot m\)</span>. La resistividad de algunos materiales la podemos encontrar en el enlace al artículo <a href="https://es.wikipedia.org/wiki/Resistividad">Resistividad</a> de la wikipedia.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> - <span class="arithmatex">\(l\)</span> es la longitud del conductor expresada en metros.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> - <span class="arithmatex">\(S\)</span> es la sección del conductor expresada en <span class="arithmatex">\(mm^2\)</span>.</li>
+</ul>
+<p>Los materiales cambian el valor de su resistividad con la temperatura y dicha variación queda expresada por:</p>
+<p><center><span class="arithmatex">\(R_{t^o} = R_0 (1 + \alpha \cdot \Delta T^o)\)</span></center></p>
+<p>Donde:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> - <span class="arithmatex">\(R_{T^o}\)</span> es la resistencia a la temperatura T (caliente).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> - <span class="arithmatex">\(R_0\)</span> es la resistencia a 20ºC o una temperatura dada.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> - <span class="arithmatex">\(\alpha\)</span> es el coeficiente de temperatura a 20ºC o una temperatura dada.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> - <span class="arithmatex">\(\Delta T^o\)</span> es el incremento de temperatura en grados centígrados.</li>
+</ul>
+<h2 id="resistencias-fijas"><FONT COLOR=#007575><strong>Resistencias fijas</strong></font><a class="headerlink" href="#resistencias-fijas" title="Permanent link">&para;</a></h2>
+<p>La resistencia es un componente electrónico del grupo denominado 'pasivos' que está diseñado para oponerse al paso de la corriente. El valor de la resistencia se expresa en ohmios o sus múltiplos. Se fabrican principalmente de carbón (la mina de un lápiz es una resistencia) o de pelicula metálica y se comercializan en una amplia gama de valores. Su aspecto lo vemos en la imagen.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/res.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Resistencias" src="../../img/apartados/resistencias/res.png" /></a><br />
+<em>Resistencias</em></p>
+<p></center></p>
+<p>Las resistencias están definidas por tres características fundamentales:</p>
+<ul>
+<li>su valor resistivo</li>
+<li>la potencia máxima que puede disipar</li>
+<li>la tolerancia</li>
+</ul>
+<p>Hay resistencias con valores de Ohmios (Ω), Kilohmios (KΩ), Megaohmios (MΩ) y otros múltiplos y submúltiplos. La equivalencias entre ellas es:</p>
+<ul>
+<li>1 Kilohmio (KΩ) = 1,000 Ohmios (Ω)</li>
+<li>1 Megaohmio (MΩ) = 1,000,000 Ohmios (Ω) = 1,000 Kilohmios (KΩ)</li>
+</ul>
+<p>Para poder saber que valor y tolerancia tiene una resistencia, existe un código de colores que nos ayuda a obtener con facilidad estos valores. La potencia no se indica expresamente en este tipo de resistencias y depende de su tamaño, por lo que con el uso nos iremos acostumbrando.</p>
+<p>Existen resistencia de 3 (en desuso), 4, 5 y 6 bandas de colores y cada una se lee de manera diferente aunque parecida.</p>
+<p>Existen muchas páginas y aplicaciones que nos ayudan a averiguar el valor de una resistencia por sus bandas de color. Una muy completa y fácil de usar es la de <a href="https://www.digikey.es/es/resources/conversion-calculators/conversion-calculator-resistor-color-code">Digikey</a>, una tienda de componentes que además nos ofrece otras muchas calculadoras que nos resultarán útiles. En la imagen vemos el resultado para una resistencia de 5 bandas de 220 ohmios.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/res220_digik.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Valor de resistencia" src="../../img/apartados/resistencias/res220_digik.png" /></a><br />
+<em>Valor de resistencia</em></p>
+<p></center></p>
+<p>En la imagen siguiente vemos las instrucciones y el diagrama para obtener el valor resistivo a partir de las bandas de color.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/codigo_colores.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Código de colores de resistencias" src="../../img/apartados/resistencias/codigo_colores.png" /></a><br />
+<em>Código de colores de resistencias</em></p>
+<p></center></p>
+<h3 id="4-bandas"><FONT COLOR=#AA0000>4 bandas</font><a class="headerlink" href="#4-bandas" title="Permanent link">&para;</a></h3>
+<p>En estas, una de las bandas estará más cercana al terminal o patilla, puede ser mas ancha y es esa su primera cifra significativa o banda 1, la siguiente es la banda 2, la siguiente es la banda multiplicadora y la cuarta banda es la banda de tolerancia, esta banda normalmente es mas estrecha. A continuación vemos como se leen estas resistencias.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/4bandas.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Resistencias de cuatro bandas" src="../../img/apartados/resistencias/4bandas.png" /></a><br />
+<em>Resistencias de cuatro bandas</em></p>
+<p></center></p>
+<p>El valor se obtendría poniendo: 56 x 10⁴ = 560k &plusmn; 5%</p>
+<h3 id="5-bandas"><FONT COLOR=#AA0000>5 bandas</font><a class="headerlink" href="#5-bandas" title="Permanent link">&para;</a></h3>
+<p>En este caso hay tres cifras significativas y se leen como vemos a continuación.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/5bandas.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Resistencias de cinco bandas" src="../../img/apartados/resistencias/5bandas.png" /></a><br />
+<em>Resistencias de cinco bandas</em></p>
+<p></center></p>
+<p>El valor se obtendría poniendo: 247 x 10² = 24700 = 24K7 &plusmn; 5%</p>
+<h3 id="6-bandas"><FONT COLOR=#AA0000>6 bandas</font><a class="headerlink" href="#6-bandas" title="Permanent link">&para;</a></h3>
+<p>A estas resistencias se añade una sexta banda como última banda para indicar el coeficiente de temperatura y también tienen tres cifras signiticativas. A continuación vemos como se leen. El coeficiente de temperatura indica cuanto cambia el valor de la resistencia en función de la temperatura utilizando normalmente ppm/K (partes por millón por grado Kelvin) como unidad. Es muy raro ver resistencias de seis bandas como componente habitual.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/6bandas.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Resistencias de seis bandas" src="../../img/apartados/resistencias/6bandas.png" /></a><br />
+<em>Resistencias de seis bandas</em></p>
+<p></center></p>
+<p>El valor se obtendría poniendo: 412 x 10³ = 412K &plusmn; 1% y 5 ppm/K</p>
+<h2 id="el-potenciometro"><FONT COLOR=#007575><strong>El potenciómetro</strong></font><a class="headerlink" href="#el-potenciometro" title="Permanent link">&para;</a></h2>
+<p>Se trata de un tipo de resistencia en la que es posible cambiar su valor. Es un dispositivo que normalmente tiene tres terminales. Un potenciómetro suele estar formado por un material resistivo (un hilo de cobre u otro material conductor o un elemento de carbón) y una escobilla (denominada cursor) de contacto móvil. Cuando el cursor se desplaza a lo largo del elemento resistivo, se produce un cambio en la resistencia entre el terminal unido a este y los terminales extremos que es entre los que está la resistencia total fija característica del potenciómetro.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/conex_usual_pot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Conexión habitual del potenciómetro" src="../../img/apartados/resistencias/conex_usual_pot.png" /></a><br />
+<em>Conexión habitual del potenciómetro</em></p>
+<p></center></p>
+<p>En la imagen siguiente vemos el aspecto de un modelo concreto de potenciómetro así como los símbolos habituales del mismo. La numeración indica lo siguiente:</p>
+<ul>
+<li>Terminales 1 y 3 son los contactos unidos a los extremos de la resistencia fija o resistencia total del potenciómetro.</li>
+<li>Terminal 2 es el contacto que va unido al cursor o parte móvil que se desliza sobre la resistencia fija haciendo que la resistencia entre un terminal y el cursor varíe en función de la posición de este.</li>
+</ul>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/aspecto_simbolo_pot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Aspecto y símbolo del potenciómetro" src="../../img/apartados/resistencias/aspecto_simbolo_pot.png" /></a><br />
+<em>Aspecto y símbolo del potenciómetro</em></p>
+<p></center></p>
+<p>La posición del cursor se determina de forma mecánica y son adecuados para usarlos como elementos de control de tensión (conexión en serie) o de corriente (conexión en paralelo). Los potenciómetros del tipo que estamos viendo (existen de otros muchos tipos) tienen un funcionamiento en forma de rotación con un ángulo de unos 270 grados entre los puntos mas extremos.</p>
+<h2 id="resistencia-ldr"><FONT COLOR=#007575><strong>Resistencia LDR</strong></font><a class="headerlink" href="#resistencia-ldr" title="Permanent link">&para;</a></h2>
+<p>Existe también un tipo de resistencia especial denominado fotoresistencia o fotoresistor que es un componente electrónico cuya resistencia disminuye de forma exponencial con el aumento de la intensidad de luz incidente. Las siglas LDR vienen de su nombre en inglés, que es Light Dependent Resistor. En la imagen siguiente tenemos el símbolo, el aspecto real de una LDR y su curva característica de variación de resistencia con la iluminación.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/simbolo_aspecto_curva_LDR.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Símbolo, aspecto y curva característica de la LDR" src="../../img/apartados/resistencias/simbolo_aspecto_curva_LDR.png" /></a><br />
+<em>Símbolo, aspecto y curva característica de la LDR</em></p>
+<p></center></p>
+<p>La resistencia de una LDR varia en proporción a la luz ambiental detectada. Con esta característica, podemos utilizar una LDR para detectar la intensidad de la luz.</p>
+<p>A continuación vemos los circuitos que se utilizan para detectar el cambio del valor de resistencia de una LDR cuando la conectamos a una placa:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/circuitos_LDR.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Circuitos para detectar variaciones de R en la LDR" src="../../img/apartados/resistencias/circuitos_LDR.png" /></a><br />
+<em>Circuitos para detectar variaciones de R en la LDR</em></p>
+<p></center></p>
+<p>En estos circuitos, cuando el valor de la resistencia de la LDR cambia debido a un cambio en la intensidad de la luz, las tensiones en la LDR y la resistencia fija también cambiarán. Podemos hacer que el valor de la intensidad de la luz se corresponda con esa tensión.</p>
+<h2 id="el-termistor"><FONT COLOR=#007575><strong>El termistor</strong></font><a class="headerlink" href="#el-termistor" title="Permanent link">&para;</a></h2>
+<p>El termistor (contracción de térmico y resistor) es una resistencia sensible a la temperatura, es decir, que cuando se produce un cambio de temperatura, la resistencia del termistor varía. Normalmene tiene forma de pequeña gota o perla, disco tipo lenteja o un cilindro encapsulado.</p>
+<p>Hay dos tipos de termistores, los que tienen un Coeficiente de Temperatura Negativo (NTC) y lo que tienen un Coeficiente de Temperatura Positivo (PTC). En un termistor NTC cuando la temperatura aumenta su resistencia disminuye y a la inversa, cuando baja la temperatura su resistencia aumenta. Esta característica la podemos aprovechar para medir temperaturas.</p>
+<p>En un termistor PTC cuando aumenta la temperatura lo hace su resistencia y cuando disminuy la temperatura también lo hace su resistencia. Este tipo de termistor se usa principalmente como fusible térmico.</p>
+<p>El símbolo de un termistor es:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/simb_termistor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Símbolo usuales del termistor" src="../../img/apartados/resistencias/simb_termistor.png" /></a><br />
+<em>Símbolo usuales del termistor</em></p>
+<p></center></p>
+<p>Existen muchas y variadas formas de encapsulados de termistores y en la <a href="https://es.wikipedia.org/wiki/Termistor">Wikipedia</a> aparecen clasificados por su forma.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/encap_termistor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Encapsulados de los termistores" src="../../img/apartados/resistencias/encap_termistor.png" /></a><br />
+<em>Encapsulados de los termistores</em></p>
+<p></center></p>
+<p>La curva característica de un termistor NTC es la siguiente:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/curva_NTC.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Curva Resistencia/Temperatura termistor NTC" src="../../img/apartados/resistencias/curva_NTC.png" /></a><br />
+<em>Curva Resistencia/Temperatura termistor NTC</em></p>
+<p></center></p>
+<p>La ecuación que relaciona el valor de resistencia y la temperatura es:</p>
+<p><center><span class="arithmatex">\(R = R_0 \cdot e^{\beta \cdot (\dfrac{1}{T} -\dfrac{1}{T_0})}\)</span></center></p>
+<p>Donde:</p>
+<ul>
+<li>R es la resistencia a temperatura ambiente T</li>
+<li><span class="arithmatex">\(R_0\)</span> es la resistencia a la temperatura ambiente <span class="arithmatex">\(T_0\)</span></li>
+<li><span class="arithmatex">\(\beta\)</span> es la constante del termistor</li>
+</ul>
+<p>La constate <span class="arithmatex">\(\beta\)</span> viene dada por:</p>
+<p><center><span class="arithmatex">\(\beta = \ln\dfrac{\dfrac{R}{R_0}}{\dfrac{1}{T}-\dfrac{1}{T_0}}\)</span></center></p>
+<p>Los valores de resistencia nominal dados a 25ºC para termistores comerciales habituales son de 1K, 10K y 100K, aunque existen de otro valores.</p>
+<p>El esquema de conexionado mas sencillo de un termistor es como el siguiente:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/esquema_base_NTC.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Esquema base de conexionado de un termistor NTC" src="../../img/apartados/resistencias/esquema_base_NTC.png" /></a><br />
+<em>Esquema base de conexionado de un termistor NTC</em></p>
+<p></center></p>
+<p>En ese circuito es muy fácil saber el valor de la tensión en P0, ya que por teoría del divisor de tensión tenemos que:</p>
+<p><center><span class="arithmatex">\(V_{P_0} = 3.3 \cdot\dfrac{R_t}{R+R_t} \Rightarrow R_t = \dfrac{R}{\dfrac{3.3}{V_{P_0}}-1}\)</span></center></p>
+<p>Podemos utilizar el valor analógico medido en el pin P0 para obtener el valor de resistencia del termistor poder obtener la temperatura a partir de la ecuación:</p>
+<p><center><span class="arithmatex">\(T = (\dfrac{1}{T_0}+\dfrac{\ln(\dfrac{R}{R_0})}{\beta})^{-1}\)</span></center></p>
+<p>El rango de temperatura en la que el termistor tiene un comportamiento muy estable y de gran sensibilidad se sitúa en torno a los 50ºC sobre una temperatura central. Otras ventajas de este tipo de termistores es que son muy económicos y que tienen un durabilidad muy alta. Sus principales desventajas son que no tienen un comportamiento lineal, su tiempo de respuesta es relativamente lento (entre 7 y 10 segundos) y su rango de temperatura es limitado.</p>
+<p>Un ejemplo de termistor NTC es el del <a href="https://www.rinconingenieril.es/wp-content/uploads/2017/08/NTC_Vishay.pdf">datasheet</a> en el que el fabricante nos suministra los valores de <span class="arithmatex">\(R_0, \space T_0 \space y \space \beta\)</span>. En la tabla extraida del datasheet podemos ver estos datos para distintas resistencias, en nuestro caso trabajamos con una que con <span class="arithmatex">\(T_0 = 25ºC, \space R_0 = 10K \space y \space \beta = 3977\)</span></p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/NTC_Vishay.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/apartados/resistencias/NTC_Vishay.png" /></a></p>
+<p></center></p>
+<p>La curva característica de un termistor PTC es la siguiente:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/curva_PTC.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Curva Resistencia/Temperatura termistor PTC" src="../../img/apartados/resistencias/curva_PTC.png" /></a><br />
+<em>Curva Resistencia/Temperatura termistor PTC</em></p>
+<p></center></p>
+<p>El circuito típico de aplicación de un termistor PTC es el siguiente:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/resistencias/esquema_base_PTC.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Esquema base de conexionado de un termistor PTC" src="../../img/apartados/resistencias/esquema_base_PTC.png" /></a><br />
+<em>Esquema base de conexionado de un termistor PTC</em></p>
+<p></center></p>
+<p>Los termistores tienen diversas utilizaciones y algunas de ellas pueden ser:</p>
+<ul>
+<li>Control de temperatura de extrusor y cama caliente en impresoras 3D de fusión de material.</li>
+<li>Termostatos.</li>
+<li>Control de temperatura de aceite en automóviles.</li>
+<li>Control de temperatura en frigorificos y hornos.</li>
+<li>Protección contra sobretensiones.</li>
+<li>Control de temperatura en la carga de baterias.</li>
+</ul>
 
 
 

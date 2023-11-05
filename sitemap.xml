@@ -2,57 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/Miscelanea/about/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/Miscelanea/lic/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/Miscelanea/soft/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/Miscelanea/webgrafia/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/apartados/cables_conn/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/apartados/ohm/</loc>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/apartados/resistencias/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/apartados/semi_disc/</loc>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/instalacion/instalacion/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/instalacion/linux/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/instalacion/macos/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fgcoca.github.io/Conceptos-basicos-electronica/instalacion/windows/</loc>
-         <lastmod>2023-11-02</lastmod>
+         <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
