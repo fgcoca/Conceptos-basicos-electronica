@@ -38,6 +38,9 @@ nav:
     - Cables y conectores: apartados/cables_conn.md
     - Ley de Ohm: apartados/ohm.md
     - Resistencias: apartados/resistencias.md
+    - La bobina: apartados/bobina.md
+    - El condensador: apartados/condensador.md
+    - Pulsador e interruptor: apartados/pulsa_int.md
     - Semiconductores discretos: apartados/semi_disc.md
   - Miscelanea:
     - Autor: Miscelanea/about.md 
