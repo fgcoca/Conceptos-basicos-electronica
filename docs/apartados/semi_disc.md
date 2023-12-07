@@ -90,7 +90,7 @@ La formula corresponde a un circuito típico de polarización de un diodo LED co
 
 Si tenemos necesidad podemos utilizar la [calculadora de resistencia serie LED](https://www.digikey.es/es/resources/conversion-calculators/conversion-calculator-led-series-resistor) de Kigikey.
 
-### <FONT COLOR=#AA0000>Matriz de de barras de LEDs</font>
+### <FONT COLOR=#AA0000>Barras de LEDs</font>
 Estas matrices de LED pueden tener distinto número de elementos y están diseñadas para mostrar información en forma de gráfico de barras fácilmente reconocible. Los elementos suelen ser acoplables por los extremos y, por tanto, tienen capacidad de extensión. El uso de estas matrices de gráficos de barras elimina los problemas de alineación, intensidad y coincidencia de colores asociados a los LED discretos. Existen modelos en que todos los LEDs son del mismo color y existen otros en los que cada LED es de un color diferente, por ejemplo rojos, amarillos y verdes. En definitiva son LED individuales dispuestos en el encapsulado en forma de barra.
 
 Normalmente un barra tiene 10 LEDs integrados en un mismo encapsulado con dos filas de pines que permiten manejarlos como LEDs individuales. En la imagen vemos su aspecto real y el diagrama de pines.

@@ -42,6 +42,10 @@ nav:
     - El condensador: apartados/condensador.md
     - Pulsador e interruptor: apartados/pulsa_int.md
     - Semiconductores discretos: apartados/semi_disc.md
+  - Conceptos técnicos: 
+    - Señales: seccion/signals.md
+    - El bus I2C: seccion/I2C.md
+    - Conversión ADC y DAC: seccion/converAD_DA.md
   - Miscelanea:
     - Autor: Miscelanea/about.md 
     - Licencias: Miscelanea/lic.md
