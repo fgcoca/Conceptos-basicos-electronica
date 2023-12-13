@@ -42,6 +42,7 @@ nav:
     - El condensador: apartados/condensador.md
     - Pulsador e interruptor: apartados/pulsa_int.md
     - Semiconductores discretos: apartados/semi_disc.md
+    - Reproductores de sonido: apartados/buzzer.md
   - Conceptos técnicos: 
     - Señales: seccion/signals.md
     - El bus I2C: seccion/I2C.md
