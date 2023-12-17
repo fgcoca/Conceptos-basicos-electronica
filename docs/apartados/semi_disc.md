@@ -226,3 +226,122 @@ Un esquema como el siguiente nos va a permitir conectar diodos LEDs al registro 
 *Control de diodos LEDs mediante 74HC595*
 
 </center>
+
+## <FONT COLOR=#007575>El transistor bipolar o BJT</font>
+Las siglas BJT corresponden a Bipolar Junction Transistor, haciendo el término bipolar referencia al hecho de que en la conducción de la corriente intervienen los dos tipos de portadores (electrones y huecos) y Juntion a como está fabricado el dispositivo, que básicamente son dos uniones PN.
+
+<center>
+
+![Uniones transistor BJT](../img/apartados/semi_disc/union_BJT.png)  
+*Uniones transistor BJT*
+
+</center>
+
+Cuando nuestro proyecto utilice un dispositivo que requiera una corriente mayor que la que puede entregar un pin GPIO será hora de recurrir a este tipo de dispositivo, que basicamente es un amplificador de corriente.
+
+En la figura siguiente aparecen los símbolos del dispositivo con representación de convenio de sentido de corrientes.
+
+<center>
+
+![Símbolos transistor BJT](../img/apartados/semi_disc/simb_BJT.png)  
+*Símbolos transistor BJT*
+
+</center>
+
+No vamos a entrar en detalles de funcionamiento interno, simplemente indicar que en su forma básica de funcionamiento dispone de tres zonas de trabajo: corte (interruptor abierto), saturación (interruptor cerrado) y zona líneal. Según la aplicación nos va a interesar que trabaje en conmutación, con un cambio lo más rápido posible entre corte y saturación; o bien en zona lineal si lo que pretendemos es que se comporte como amplificador.
+
+Quizá el simil que mejor explica el funcionamiento, al menos desde mi punto de vista, es el que podemos encontrar en la página de facebook de [Ingenieria Mecafenis](https://www.facebook.com/Mecafenix/posts/una-manera-sencilla-de-entender-como-funcionan-los-transistores/1634596350007190/?locale=es_LA) y que reproduzco aquí.
+
+<center>
+
+![Simil hidraúlico de funcionamiento del transistor](../img/apartados/semi_disc/simil_grifo.png)  
+*Simil hidraúlico de funcionamiento del transistor*
+
+</center>
+
+Existen tres tipos básicos según la potencia que son capaces de manejar: baja potencia o de señal, mediana potencia y alta potencia. Además de por sus características electricas se distinguen por su encapsulados, de plástico para baja potencia, mixto plástico metal para mediana potencia y totalmente metálico para alta potencia. En la figura vemos ejemplos de los mismos con el nombre del encapsulado.
+
+<center>
+
+![Aspecto físico en diferentes encapsulados](../img/apartados/semi_disc/aspecto_encap.png)  
+*Aspecto físico en diferentes encapsulados*
+
+</center>
+
+En nuestro caso tendremos suficiente con transistores de señal tanto NPN como PNP. Hay miles de modelos de estos transistores. A continuación dejamos una pequeña tabla con los más comunes por parejas de complementarios y el acceso a sus hojas de datos, aspecto fundamental a conocer cuando se trabaja con estos dispositivos.
+
+<center>
+
+<font size="1">
+
+|Modelo|Capsula|Tipo|$V_{CE}$|Ic|hFE|Potencia|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|[2N3904](../datasheet/2N3904.PDF)|TO92|NPN|40 V|200 mA|100 min|625 mW|
+|[2N3906](../datasheet/2N3906.pdf)|TO92|PNP|40 V|200 mA|100 min|625 mW|
+|[BC547](../datasheet/BC547.pdf)|TO92|NPN|45 V|100 mA|110 min|625 mW|
+|[BC557](../datasheet/BC557.PDF)|TO92|PNP|45 V|100 mA|110 min|625 mW|
+|[S8050](../datasheet/SS8050.pdf)|TO92|NPN|25 V|1.5 A|40 min|1 W|
+|[S8550](../datasheet/SS8550.pdf)|TO92|PNP|25 V|1.5 A|40 min|1 W|
+|[MMBT3904](../datasheet/MMBT3904.PDF)|SOT23|NPN|40 V|200 mA|100 min|225 mW|
+|[MMBT3906](../datasheet/MMBT3906.PDF)|SOT23|PNP|40 V|200 mA|100 min|225 mW|
+
+</font size>
+
+</center>
+
+Dependiendo de la aplicación que pretendamos dar a nuestro transistor habrá que montar uno u otro circuito con mas o menos resistencias para mejorar su estabilidad. En la figura siguiente se exponen los tres circuitos básicos de polarización de un transistor montado en configuración de emisor común. Se denomina de emisoar común porque esta es la patilla común al circuito de entrada (base) y el de salida (colector).
+
+<center>
+
+![Circuitos de polarización](../img/apartados/semi_disc/circ_pol.png)  
+*Circuitos de polarización*
+
+</center>
+
+Para nuestros propósitos el circuito de polarización por resistencia de base será mas que suficiente para cualquiera de los transistores citados en la tabla anterior y el dispositivo a alimentar será el sustituto de la resistencia de carga.
+
+En el tema [teoria del transistor BJT](../conceptos/teoria_transistor_BJT.pdf) obtenido de **OpenCourseWare (OCW)** del [Instituto Tecnológico de Massachusetts (MIT)](https://ocw.mit.edu/) que adopta la [Universidad del País Vasco / Euskal Herriko Unibertsitatea](http://www.ehu.es/) con el fin de poner a disposición de la sociedad los materiales creados en la comunidad universitaria, se puede profundizar mas en el tema.
+
+## <FONT COLOR=#007575>**Transistor MOSFET**</font>
+La palabra MOSFET es un compuesto de dos terminos: MOS (Metal Oxido Semiconductor) en referencia al dieléctrico utilizazo y FET (Field Effect Transistor o transistor de efecto de campo) en referencia a su modo de conducción por campo magnético. Es un transistor que se activa por tensión, es decir que aplicar tensión conduce la corriente entre dos de sus patillas y esta es controlada por la tercera patilla llamada "Puerta o Gate". Las otras dos patillas son "Surtidor o Fuente" y "Dreandor". La principales ventajas de un transistor MOSFET frente a un BJT son:
+
+* Su patilla G se activa por tensión en lugar de por corriente.
+* Se pueden construir en tamaños mas pequeños.
+* Su velocidad de conmutación corte/saturación es del orden de nanosegundos.
+* La conducción de corriente se controla por un campo electrico.
+* Para su funcionamiento requieren menos potencia y por tanto disipan menos energia.
+
+Existen dos tipos de transistores MOSFET, los de canal N y los de canal P cuyos símbolos vemos a continuación:
+
+<center>
+
+![Símbolos MOSFET](../img/apartados/semi_disc/simb_MOSFET.png)  
+*Símbolos MOSFET*
+
+</center>
+
+Un transistor MOSFET controla la corriente entre el surtidor (entrada) y el drenador (salida) mediante una tensión aplicada en la puerta denominada "tensión de umbral". Es un interruptor controlado por tensión.
+
+La base de su funcionamiento la vemos a continuación.
+
+<center>
+
+![Polarización MOSFET](../img/apartados/semi_disc/pol_MOSFET.png)  
+*Polarización MOSFET*
+
+</center>
+
+A continuación vemos definidas las zonas de funcionamiento sobre la curvas caracteerísticas tensión / corriente de un transistor genérico.
+
+<center>
+
+![Curvas caracteerísticas tensión / corriente](../img/apartados/semi_disc/curvas_mosfet.png)  
+*Curvas caracteerísticas tensión / corriente*
+
+</center>
+
+Las zonas de funcionamiento son:
+
+* **Corte**. La corriente $I_D$ es nula independientemente del valor de $V_{DS}$. A efectos prácticos es el eje horizontal.
+* **No saturación**. Es la zona definida desde el codo de las curvas hacia la izquierda, es decir cuando la $V_{DS}$ está por debajo del valor de saturación. Es una zona de aumento de corriente donde el transistor tiene un comportamiento similar al de una resistencia variable controlada por la tensión de la puerta.
+* **Saturación**. Corresponde a la zona plana de las curvas con $I_D$ constante definida desde el codo de saturación hasta el valor máximo de $V_{DS}$ que se conoce como tensión de ruptura y que es propio de cada transistor. En esta zona podemos asimilar el comportamiento del transistor como una fuente de corriente constante controlada por la tensión de puerta.
