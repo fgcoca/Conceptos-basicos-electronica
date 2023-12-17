@@ -18,6 +18,57 @@ En la imagen y la tabla siguientes vemos un dibujo con un fragmento de las tecla
 
 </center>
 
+Otro de los parámetros que caracterizan al sonido es su nivel y en sonido se caracteriza con los decibelios (dB) que es la forma de medir la intensidad del sonido. La percepción del sonido depende de factores como la intensidad, el tiempo que dura, las frecuencias o tonos y el entorno donde estamos. Vamos a introducir brevemente como medir la intensidad del sonido.
+
+Los decibelios (dB) son la unidad de medida de presión acústica. Medimos presión, luego estamos midiendo una fuerza y mas concretamente una fuerza por unidad de superficie. Un sonido pierde intensidad según nos alejamos de la fuente y lo hace a un ritmo de unos 6 dB cada que vez que se duplica la distancia. Vemos un ejemplo: supongamos que escuchamos un sonido de 45 dB a una distancia de un metro, cuando nos pongamos a dos metros escucharemos 39 dB, cuando estemos a 4 metros, será de 33 dB y cuando estemos a 8 metros, de 27 dB.
+
+La escala de medida en dB no es lineal, es logaritmica porque representa mejor la forma en que sentimos los cambios de la intensidad del sonido con nuestro oido. Algunos datos para reflexionar sobre el ruido:
+
+* El sonido se vuelve dañino para el ser humano a partir de los 75 dB.
+* Alrededor de los 120 dB causa dolor. Una exposición de dos horas a 100 dB necesita un día completo para que el oido compense la exposición.
+* Sonido en torno a 180 dB pueden ocasionar la muerte.
+
+En la tabla vemos algunos ejemplos del día a día:
+
+<center>
+
+|nivel de sonido|Percepción|Situación|
+|---|---|---|
+|0 dB|Muy bajo|Nivel de audición humano|
+|10 a 30 dB|Nivel bajo|Conversación tranquila. Biblioteca|
+|30 a 50 dB|Nivel bajo|Conversación normal. Motor frigorifico. Agua saliendo del grifo|
+|55 a 75 dB|Nivel considerable|Aspirador. Calle con trafico denso. Despertador. Batidora|
+|75 a 100 dB|Nivel alto|Sensación molesta. Atasco de tráfico. Sirena de policia|
+|100 a 120 dB|Muy alto|Taladro/claxon/concierto R&R = 120 dB. Interior discoteca = 110 dB|
+|mas de 120 dB|Dolor|Avión despegando a 25 metros. Petardo a un metro|
+
+</center>
+
+Una equivalencia que nos puede ayudar a familiarizarnos con esta unidad es la tabla de equivalencias entre potencias y dBm (decibelios milivatio):
+
+<center>
+<font size="1">
+
+| <font size="1">P (mW) | <font size="1">dBm | <font size="1">P (mW) | <font size="1">dBm | <font size="1">P (mW) | <font size="1">dBm | <font size="1">P (mW) | <font size="1">dBm |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| <font size="1">1 | <font size="1">0 | <font size="1">16 | <font size="1">12 | <font size="1">250 | <font size="1">24 | <font size="1">4 W | <font size="1">36 |
+| <font size="1">1.3 | <font size="1">1 | <font size="1">20 | <font size="1">13 | <font size="1">315 | <font size="1">25 | <font size="1">5 W | <font size="1">37 |
+| <font size="1">1.6 | <font size="1">2 | <font size="1">25 | <font size="1">14 | <font size="1">400 | <font size="1">26 | <font size="1">6 W | <font size="1">38 |
+| <font size="1">2 | <font size="1">3 | <font size="1">32 | <font size="1">15 | <font size="1">500 | <font size="1">27 | <font size="1">8 W | <font size="1">39 |
+| <font size="1">2.5 | <font size="1">4 | <font size="1">40 | <font size="1">16 | <font size="1">630 | <font size="1">28 | <font size="1">10 W | <font size="1">40 |
+| <font size="1">3.2 | <font size="1">5 | <font size="1">50 | <font size="1">17 | <font size="1">800 | <font size="1">29 | <font size="1">13 W | <font size="1">41 |
+| <font size="1">4 | <font size="1">6 | <font size="1">64 | <font size="1">18 | <font size="1"> 1 W | <font size="1">30 | <font size="1">16 W | <font size="1">42 |
+| <font size="1">5 | <font size="1">7 | <font size="1">80 | <font size="1">19 | <font size="1">1.3 W | <font size="1">31 | <font size="1">20 W | <font size="1">43 |
+| <font size="1">6 | <font size="1">8 | <font size="1">100 | <font size="1">20 | <font size="1">1.6 W | <font size="1">32 | <font size="1">25 W | <font size="1">44 |
+| <font size="1">8 | <font size="1">9 | <font size="1">125 | <font size="1">21 | <font size="1">2 W | <font size="1">33 | <font size="1">32 W | <font size="1">45 |
+| <font size="1">10 | <font size="1">10 | <font size="1">158 | <font size="1">22 | <font size="1">2.5 W | <font size="1">34 | <font size="1">40 W | <font size="1">46 |
+| <font size="1">13 | <font size="1">11 | <font size="1">200 | <font size="1">23 | <font size="1">3 W | <font size="1">35 | <font size="1">50 W | <font size="1">47 |
+
+</font size>
+</center>
+
+Si observamos cuidadosamente la tabla veremos que la potencia se duplica o divide por dos, según recorramos la tabla, cada 3 dB.
+
 ## <FONT COLOR=#007575>**Zumbador pasivo**</font>
 Un zumbador o buzzer pasivo no es mas que un pequeño altavoz que nos sirve para convertir una señal eléctrica en una onda de sonido. Son dispositivos que no disponen de ningún tipo de electrónica interna, por lo que tenemos que proporcionar una señal eléctrica para conseguir el sonido deseado.
 
@@ -29,6 +80,17 @@ Un buzzer se basa en un transductor piezoeléctrico que es capaz de variar su vo
 
 ![Funcionamiento de un buzzer](../img/apartados/buzzer/buzzer.png)  
 *Funcionamiento de un buzzer*
+
+</center>
+
+Un zumbador pasivo requiere para su funcionamiento una señal de tipo PWM para poder indicarle la frecuencia y la duración de la señal.
+
+El aspecto por ambos lados nos ayudará a distinguirlo del activo.
+
+<center>
+
+![Aspecto de un buzzer pasivo](../img/apartados/buzzer/buzzer_pas_dist.png)  
+*Aspecto de un buzzer pasivo*
 
 </center>
 
@@ -45,6 +107,44 @@ El zumbador activo tiene el aspecto que vemos en la figura siguiente:
 *Aspecto de un zumbador activo*
 
 </center>
+
+Un zumbador activo produce un tono audible fijo con tan solo aplicarle tensión.
+
+El aspecto por ambos lados nos ayudará a distinguirlo del pasivo.
+
+<center>
+
+![Aspecto de un buzzer activo](../img/apartados/buzzer/buzzer_act_dist.png)  
+*Aspecto de un buzzer activo*
+
+</center>
+
+## <FONT COLOR=#007575>**Excitación de zumbadores**</font>
+Cualquiera de los zumbadores vistos van a requerir una corriente mayor de la que un pin GPIO de la Raspberry Pi Pico tiene capacidad de entregar a su salida, por lo que no podemos atacarlo directamente y será necesario recurrir a un transistor para amplificar la corriente.
+
+Como existen dos tipos de transistores semiconductores (PNP y NPN) vamos a poder disponer de dos circuitos de excitación similares basados en el uso de un transistor como amplificador de corriente y así poder manejar la corriente de excitación del buzzer con la corriente de colector del transistor y utilizar la corriente de salida del pin GPIO comocorriente de excitación en la base del transistor.
+
+Si se utiliza un transistor NPN para controlar un zumbador el esquema del circuito es el de la figura siguiente:
+
+<center>
+
+![Circuito de excitación con transistor NPN](../img/apartados/buzzer/exc_NPN.png)  
+*Circuito de excitación con transistor NPN*
+
+</center>
+
+Si GPIO emite un nivel alto, circula corriente a través de R1, el transistor se saturará haciendo circular corriente entre emisor y colector con lo que el zumbador sonará. Si la salida GPIO está a nivel bajo, no circula corriente a través de R1, el transistor no conduce y el zumbador no sonará.
+
+Si se utiliza un transistor PNP para controlar un zumbador el esquema del circuito es el de la figura siguiente:
+
+<center>
+
+![Circuito de excitación con transistor PNP](../img/apartados/buzzer/exc_PNP.png)  
+*Circuito de excitación con transistor PNP*
+
+</center>
+
+Si GPIO emite un nivel bajo, circula corriente a través de R1, el transistor se saturará haciendo circular corriente entre emisor y colector con lo que el zumbador sonará. Si la salida GPIO está a nivel alto, no circula corriente a través de R1, el transistor no conduce y el zumbador no sonará.
 
 ## <FONT COLOR=#007575>**Introducción a la amplificación**</font>
 Un amplificador es un dispositivo capaz de aumentar en su salida lo que introducimos en su entrada. Existen dos magnitudes que relacionan la salida con la entrada, normalmente en función de la frecuencia, y son:
@@ -152,3 +252,39 @@ Se puede observar que el altavoz es de membrana y bobina móvil por lo que es al
 *Altavoz de bobina móvil*
 
 </center>
+
+## <FONT COLOR=#007575>**Auriculares**</font>
+Existen de muchos tipos, formas y aplicaciones. Veamos un breve resumen de los mismos:
+
+* **Circumaurales**. Seguramente los mejores de todos en cuanto a calidad de sonido. Se conocen también por auriculares HiFi. Son caros.
+* **Supraurales**. Se suelen conocer como portátiles. Centra el apoyo en la oreja lo que los hace algo incomodos. Buena calidad de sonido. Suelen ser plegables.
+* **Mini supra**. Pueden ser tipo diadema o con enganche para la oreja. Peor calidad de sonido que los anteriores. Suelen usarse cuando tenemos que estar en movimiento.
+* **Intra aurales**. Se introducen en el conducto auditivo al estilo de los audifonos, lo que aisla muy bien del sonido exterior. Son de última generación y dan una calidad de sonido muy buena. Suelen seer inalámbricos.
+* **De botón**. Parecidos a los intra aurales pero sin entrar en el conducto auditivo, solo en la oreja. Son los que peor calidad de sonido ofrecen dado que no aislan nada del exterior.
+
+<center>
+
+![Auriculares](../img/apartados/buzzer/Auriculares.png)  
+*Auriculares*
+
+</center>
+
+## <FONT COLOR=#007575>**Micrófonos**</font>
+Un micrófono es un dispositivo de entrada que sirve para transformar ondas sonoras en energia electrica y vicerversa en procesos de grabación.
+
+Existe multitud de tipos de micrófonos para distintas aplicaciones en las que no vamos a entrar. En el [enlace](https://es.wikipedia.org/wiki/Micr%C3%B3fono#:~:text=Un%20micr%C3%B3fono%20funciona%20como%20un,su%20intensidad%2C%20transmitirla%20y%20registrarla.) tienes un amplio artículo sobre los mismos.
+
+Existe un tipo denominado MEMs ("Microelectromechanical systems" en inglés) que también se denominan chips microfónicos y son variantes del micrófono a condensador. El diafragma sensible está grabado sobre la oblea de silicio y suelen integrarse con un amplificador incorporado.
+
+Un micrófono funciona como un transductor o sensor electroacústico y convierte el sonido (ondas sonoras) en una señal eléctrica para aumentar su intensidad, transmitirla y registrarla.
+
+El SPU0410LR5H-QB consta de un sensor acústico, un búfer de entrada de bajo ruido y un amplificador de salida. El dispositivo tiene un alto rendimiento acústico de banda ancha y RF. Es un micrófono omnidireccional, en el que se considera que su respuesta es como una esfera en tres dimensiones.
+
+<center>
+
+![Aspecto del micrófono SPU0410LR5H-QB](../img/apartados/buzzer/SPU0410LR5H-QB.png)  
+*Aspecto del micrófono SPU0410LR5H-QB*
+
+</center>
+
+En el [datasheet](../datasheet/SPU0410LR5H_QB.pdf) tenemos toda la información del dispositivo.
