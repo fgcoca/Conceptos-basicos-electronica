@@ -227,6 +227,103 @@ Un esquema como el siguiente nos va a permitir conectar diodos LEDs al registro 
 
 </center>
 
+## <FONT COLOR=#007575>LED RGB direccionable</font>
+Comúnmente se les conoce como Neopixel, que es una marca registrada por [Adafruit Industries](https://www.adafruit.com/). Cada LED que componen la tira o matriz tiene los siguientes cuatro pines:
+
+* Alimentación VDD: 5V
+* Tierra: GND
+* DI (Date Input): pin para recibir información
+* DO (Date Output): pin para enviar inforamción
+
+Cada uno de los LEDs es direccionable de manera individual gracias al circuito electrónico que incluyen que es un circuito lógico con una memoria de un byte por color. Los tipos mas comunes son el SK6812, WS2811 o, el mas habitual de todos, el WS2812 cuyo [datasheet](./datasheet/WS2812.pdf) tenemos en el enlace.
+
+El WS2812B incluye un oscilador interno de precisión y un circuito de control de corriente constante programable de 12 V, lo que garantiza de manera efectiva que la intensidad del color sea consistente. El protocolo de transferencia de datos utiliza un único modo de comunicación de multiplexado NZR.
+
+En la figura siguiente vemos el aspecto de un diodo LED RGB individual en formato inserción y SMD.
+
+<center>
+
+![Aspecto de un diodo LED RGB direccionable](../img/apartados/semi_disc/neop/LEDneo.png)  
+*Aspecto de un diodo LED RGB direccionable*
+
+</center>
+
+### <FONT COLOR=#AA0000>**Aspectos previos**</font>
+Para transmitir información digital esta se debe sincronizar mediante una convención especial, la codificación. Dos dispositivos llevan una comunicación por cable convirtiendo la información a transmitir en un flujo de bits (0 y 1) o "Dates" que se suele nombrar con la letra D y que va acompañada de una señal de reloj para sincronizar las transmisiones. La forma convencional de transmisión digital se componen de una línea de datos mas una línea de reloj. Ahora bien, cualquier ligera desviación en la longitud de estas líneas hará que el receptor no cumpla con el tiempo de establecimiento del muestreo de datos, originando errores en los datos. La forma de asegurar que esas líneas son idénticas es que sean la misma línea, lo que hace que aparezcan códigos que fusionan los datos y el reloj, entre los que están los código RZ, NRZ y NRZI que vamos a ver someramente a continuación.
+
+* **Codificación RZ**. El acrónimo de de "Return Zero" o retorno cero y su característica es que se transmiten bits de datos dentro de cada periodo de la señal. En la figura siguiente los datos se representan en rojo y vemos que ocupan una parte del periodo T, siendo y matrices RGBcero el resto del tiempo. Este sistema se denomina RZ unipolar o retorno a cero unipolar y como se observa en la figura un nivel bajo indica 0 y un nivel positivo indica 1.
+
+<center>
+
+![Código RZ unipolar](../img/apartados/semi_disc/neop/RZ-uni.png)  
+*Código RZ unipolar*
+
+</center>
+
+El código de retorno a cero se divide en un código de retorno a cero unipolar y un código de retorno a cero bipolar en el que el nivel alto indica 1 y el nivel negativo o, tal y como vemos en la figura siguiente:
+
+<center>
+
+![Código RZ bipolar](../img/apartados/semi_disc/neop/RZ-bip.png)
+
+*Código RZ bipolar*
+
+</center>
+
+* **Codificación NRZ**. El acrónimo es de "Not Return Zero" o código sin retorno a cero y se diferencia del RZ en que no necesita retornar a cero. En la figura siguiente vemos gráficamente el código.
+
+<center>
+
+![Código NRZ](../img/apartados/semi_disc/neop/NRZ.png)
+
+*Código NRZ*
+
+</center>
+
+En el datasheet estos código se denominan T0H y T0L.
+
+El funcionamiento de una agrupación en cascada como la de la figura siguiente se puede resumir diciendo que: el circuito integrado de cada LED puede almacenar 3 bytes (24 bits), un byte para cada color. Solo el primer LED está conectado al Pin de control, en este caso, un pin digital de nuestra placa, que enviará la cadena de todos los colores según el número de pixeles que estén conectados y a su vez el primer LED recibirá la información de todos los colores uno tras otro. La información se transmite de un LED a otro porque cuando un LED recibe 3 bytes nuevos de información entrega al siguiente LED los 3 bytes que contenía anteriormente, de esta manera cuando la placa con el programa termina de mandar todos los colores por el pin de datos el primer LED habría recibido y enviado todos los colores para quedarse finalmente con el color que le corresponde y así el resto de LEDs. De esta forma una tira de LEDs RGB direccionables es un dispositivo digital de salida, es decir su funcionamiento consiste en recibir la información del color a mostrar y mostrarlo.digital de salida, es decir su funcionamiento consiste en recibir la información del color a mostrar y mostrarlo.
+
+<center>
+
+![Conexión en cascada](../img/apartados/semi_disc/neop/cascada.png)
+
+*Conexión en cascada*
+
+</center>
+
+### <FONT COLOR=#AA0000>**Aspectos técnicos**</font>
+Los LEDs RGB direccionables se suelen suministrar en tiras de diferentes longitudes y con distinto número de LEDs y a veces se dispone la tira en forma de matriz. En la figura siguiente vemos el aspecto de algunos tipos.
+
+<center>
+
+![Tira y matriz de LEDs RGB](../img/apartados/semi_disc/neop/tira.png)  
+*Tira y matriz de LEDs RGB*
+
+</center>
+
+Tienen 3 cables asociados a un conector y dos cables extra para añadir alimentación externa cuando es necesario porque la placa de control no entrega suficiente corriente para alimentar al conjunto. Cuando se trabaja con una tira de pocos LEDs no es necesario añadir esta alimentación externa, ya que placas como Arduino UNO o la ESP32 STEAMakers pueden suministrar la corriente que necesitan.
+
+En la figura siguiente vemos una tira de 8 LEDs:
+
+<center>
+
+![Tira de ocho LEDs RGB](../img/apartados/semi_disc/neop/tira8.png)  
+*Tira de ocho LEDs RGB*
+
+</center>
+
+Cualquier tira de LEDs RGB (sea cual sea su disposición en línea, como matriz, etc) debe utilizarse siempre en la dirección que marca el terminal hembra como entrada y el conector macho como salida. Las podemos ir conectando entre sí pero siempre respetando este sentido de la tira. Junto a cada led RGB está indicada la dirección de la tira mediante un triángulo y también a qué pin debe ir conectado cada cable. Vemos +5V que corresponde a Vcc, GND, y en medio que pone Din o D0 que corresponde al pin digital de entrada de datos que debemos conectar al pin de salida de la placa de control.
+
+También las podemos cortar por cualquiera de las líneas existentes entre cada uno de los LEDs y que está marcado con la línea de corte. El corte debe hacerse dejando la mitad del pad de cobre a un lado y otro de la línea y así poder unir después entre ellas con conectores especializados o soldándolas.
+
+<center>
+
+![Dirección y línea de corte](../img/apartados/semi_disc/neop/direc-corte.png)  
+*Dirección y línea de corte*
+
+</center>
+
 ## <FONT COLOR=#007575>El transistor bipolar o BJT</font>
 Las siglas BJT corresponden a Bipolar Junction Transistor, haciendo el término bipolar referencia al hecho de que en la conducción de la corriente intervienen los dos tipos de portadores (electrones y huecos) y Juntion a como está fabricado el dispositivo, que básicamente son dos uniones PN.
 

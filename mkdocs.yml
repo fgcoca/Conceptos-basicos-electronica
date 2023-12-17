@@ -47,6 +47,7 @@ nav:
     - Señales: seccion/signals.md
     - El bus I2C: seccion/I2C.md
     - Conversión ADC y DAC: seccion/converAD_DA.md
+    - Alimentación de Neopixeles: seccion/alim_neop.md
   - Miscelanea:
     - Autor: Miscelanea/about.md 
     - Licencias: Miscelanea/lic.md
