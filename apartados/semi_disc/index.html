@@ -622,6 +622,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#el-transistor-bipolar-o-bjt" class="md-nav__link">
+    El transistor bipolar o BJT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transistor-mosfet" class="md-nav__link">
+    Transistor MOSFET
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -961,6 +975,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-transistor-bipolar-o-bjt" class="md-nav__link">
+    El transistor bipolar o BJT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transistor-mosfet" class="md-nav__link">
+    Transistor MOSFET
+  </a>
   
 </li>
       
@@ -1321,6 +1349,159 @@
 <p><a class="glightbox" href="../../img/apartados/semi_disc/7seg/control_con_74HC595.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Control de diodos LEDs mediante 74HC595" src="../../img/apartados/semi_disc/7seg/control_con_74HC595.png" /></a><br />
 <em>Control de diodos LEDs mediante 74HC595</em></p>
 <p></center></p>
+<h2 id="el-transistor-bipolar-o-bjt"><FONT COLOR=#007575>El transistor bipolar o BJT</font><a class="headerlink" href="#el-transistor-bipolar-o-bjt" title="Permanent link">&para;</a></h2>
+<p>Las siglas BJT corresponden a Bipolar Junction Transistor, haciendo el término bipolar referencia al hecho de que en la conducción de la corriente intervienen los dos tipos de portadores (electrones y huecos) y Juntion a como está fabricado el dispositivo, que básicamente son dos uniones PN.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/semi_disc/union_BJT.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Uniones transistor BJT" src="../../img/apartados/semi_disc/union_BJT.png" /></a><br />
+<em>Uniones transistor BJT</em></p>
+<p></center></p>
+<p>Cuando nuestro proyecto utilice un dispositivo que requiera una corriente mayor que la que puede entregar un pin GPIO será hora de recurrir a este tipo de dispositivo, que basicamente es un amplificador de corriente.</p>
+<p>En la figura siguiente aparecen los símbolos del dispositivo con representación de convenio de sentido de corrientes.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/semi_disc/simb_BJT.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Símbolos transistor BJT" src="../../img/apartados/semi_disc/simb_BJT.png" /></a><br />
+<em>Símbolos transistor BJT</em></p>
+<p></center></p>
+<p>No vamos a entrar en detalles de funcionamiento interno, simplemente indicar que en su forma básica de funcionamiento dispone de tres zonas de trabajo: corte (interruptor abierto), saturación (interruptor cerrado) y zona líneal. Según la aplicación nos va a interesar que trabaje en conmutación, con un cambio lo más rápido posible entre corte y saturación; o bien en zona lineal si lo que pretendemos es que se comporte como amplificador.</p>
+<p>Quizá el simil que mejor explica el funcionamiento, al menos desde mi punto de vista, es el que podemos encontrar en la página de facebook de <a href="https://www.facebook.com/Mecafenix/posts/una-manera-sencilla-de-entender-como-funcionan-los-transistores/1634596350007190/?locale=es_LA">Ingenieria Mecafenis</a> y que reproduzco aquí.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/semi_disc/simil_grifo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Simil hidraúlico de funcionamiento del transistor" src="../../img/apartados/semi_disc/simil_grifo.png" /></a><br />
+<em>Simil hidraúlico de funcionamiento del transistor</em></p>
+<p></center></p>
+<p>Existen tres tipos básicos según la potencia que son capaces de manejar: baja potencia o de señal, mediana potencia y alta potencia. Además de por sus características electricas se distinguen por su encapsulados, de plástico para baja potencia, mixto plástico metal para mediana potencia y totalmente metálico para alta potencia. En la figura vemos ejemplos de los mismos con el nombre del encapsulado.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/semi_disc/aspecto_encap.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Aspecto físico en diferentes encapsulados" src="../../img/apartados/semi_disc/aspecto_encap.png" /></a><br />
+<em>Aspecto físico en diferentes encapsulados</em></p>
+<p></center></p>
+<p>En nuestro caso tendremos suficiente con transistores de señal tanto NPN como PNP. Hay miles de modelos de estos transistores. A continuación dejamos una pequeña tabla con los más comunes por parejas de complementarios y el acceso a sus hojas de datos, aspecto fundamental a conocer cuando se trabaja con estos dispositivos.</p>
+<p><center></p>
+<p><font size="1"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Modelo</th>
+<th style="text-align: center;">Capsula</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;"><span class="arithmatex">\(V_{CE}\)</span></th>
+<th style="text-align: center;">Ic</th>
+<th style="text-align: center;">hFE</th>
+<th style="text-align: center;">Potencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="../../datasheet/2N3904.PDF">2N3904</a></td>
+<td style="text-align: center;">TO92</td>
+<td style="text-align: center;">NPN</td>
+<td style="text-align: center;">40 V</td>
+<td style="text-align: center;">200 mA</td>
+<td style="text-align: center;">100 min</td>
+<td style="text-align: center;">625 mW</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../../datasheet/2N3906.pdf">2N3906</a></td>
+<td style="text-align: center;">TO92</td>
+<td style="text-align: center;">PNP</td>
+<td style="text-align: center;">40 V</td>
+<td style="text-align: center;">200 mA</td>
+<td style="text-align: center;">100 min</td>
+<td style="text-align: center;">625 mW</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../../datasheet/BC547.pdf">BC547</a></td>
+<td style="text-align: center;">TO92</td>
+<td style="text-align: center;">NPN</td>
+<td style="text-align: center;">45 V</td>
+<td style="text-align: center;">100 mA</td>
+<td style="text-align: center;">110 min</td>
+<td style="text-align: center;">625 mW</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../../datasheet/BC557.PDF">BC557</a></td>
+<td style="text-align: center;">TO92</td>
+<td style="text-align: center;">PNP</td>
+<td style="text-align: center;">45 V</td>
+<td style="text-align: center;">100 mA</td>
+<td style="text-align: center;">110 min</td>
+<td style="text-align: center;">625 mW</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../../datasheet/SS8050.pdf">S8050</a></td>
+<td style="text-align: center;">TO92</td>
+<td style="text-align: center;">NPN</td>
+<td style="text-align: center;">25 V</td>
+<td style="text-align: center;">1.5 A</td>
+<td style="text-align: center;">40 min</td>
+<td style="text-align: center;">1 W</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../../datasheet/SS8550.pdf">S8550</a></td>
+<td style="text-align: center;">TO92</td>
+<td style="text-align: center;">PNP</td>
+<td style="text-align: center;">25 V</td>
+<td style="text-align: center;">1.5 A</td>
+<td style="text-align: center;">40 min</td>
+<td style="text-align: center;">1 W</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../../datasheet/MMBT3904.PDF">MMBT3904</a></td>
+<td style="text-align: center;">SOT23</td>
+<td style="text-align: center;">NPN</td>
+<td style="text-align: center;">40 V</td>
+<td style="text-align: center;">200 mA</td>
+<td style="text-align: center;">100 min</td>
+<td style="text-align: center;">225 mW</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../../datasheet/MMBT3906.PDF">MMBT3906</a></td>
+<td style="text-align: center;">SOT23</td>
+<td style="text-align: center;">PNP</td>
+<td style="text-align: center;">40 V</td>
+<td style="text-align: center;">200 mA</td>
+<td style="text-align: center;">100 min</td>
+<td style="text-align: center;">225 mW</td>
+</tr>
+</tbody>
+</table>
+<p></font size></p>
+<p></center></p>
+<p>Dependiendo de la aplicación que pretendamos dar a nuestro transistor habrá que montar uno u otro circuito con mas o menos resistencias para mejorar su estabilidad. En la figura siguiente se exponen los tres circuitos básicos de polarización de un transistor montado en configuración de emisor común. Se denomina de emisoar común porque esta es la patilla común al circuito de entrada (base) y el de salida (colector).</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/semi_disc/circ_pol.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Circuitos de polarización" src="../../img/apartados/semi_disc/circ_pol.png" /></a><br />
+<em>Circuitos de polarización</em></p>
+<p></center></p>
+<p>Para nuestros propósitos el circuito de polarización por resistencia de base será mas que suficiente para cualquiera de los transistores citados en la tabla anterior y el dispositivo a alimentar será el sustituto de la resistencia de carga.</p>
+<p>En el tema <a href="../conceptos/teoria_transistor_BJT.pdf">teoria del transistor BJT</a> obtenido de <strong>OpenCourseWare (OCW)</strong> del <a href="https://ocw.mit.edu/">Instituto Tecnológico de Massachusetts (MIT)</a> que adopta la <a href="http://www.ehu.es/">Universidad del País Vasco / Euskal Herriko Unibertsitatea</a> con el fin de poner a disposición de la sociedad los materiales creados en la comunidad universitaria, se puede profundizar mas en el tema.</p>
+<h2 id="transistor-mosfet"><FONT COLOR=#007575><strong>Transistor MOSFET</strong></font><a class="headerlink" href="#transistor-mosfet" title="Permanent link">&para;</a></h2>
+<p>La palabra MOSFET es un compuesto de dos terminos: MOS (Metal Oxido Semiconductor) en referencia al dieléctrico utilizazo y FET (Field Effect Transistor o transistor de efecto de campo) en referencia a su modo de conducción por campo magnético. Es un transistor que se activa por tensión, es decir que aplicar tensión conduce la corriente entre dos de sus patillas y esta es controlada por la tercera patilla llamada "Puerta o Gate". Las otras dos patillas son "Surtidor o Fuente" y "Dreandor". La principales ventajas de un transistor MOSFET frente a un BJT son:</p>
+<ul>
+<li>Su patilla G se activa por tensión en lugar de por corriente.</li>
+<li>Se pueden construir en tamaños mas pequeños.</li>
+<li>Su velocidad de conmutación corte/saturación es del orden de nanosegundos.</li>
+<li>La conducción de corriente se controla por un campo electrico.</li>
+<li>Para su funcionamiento requieren menos potencia y por tanto disipan menos energia.</li>
+</ul>
+<p>Existen dos tipos de transistores MOSFET, los de canal N y los de canal P cuyos símbolos vemos a continuación:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/semi_disc/simb_MOSFET.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Símbolos MOSFET" src="../../img/apartados/semi_disc/simb_MOSFET.png" /></a><br />
+<em>Símbolos MOSFET</em></p>
+<p></center></p>
+<p>Un transistor MOSFET controla la corriente entre el surtidor (entrada) y el drenador (salida) mediante una tensión aplicada en la puerta denominada "tensión de umbral". Es un interruptor controlado por tensión.</p>
+<p>La base de su funcionamiento la vemos a continuación.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/semi_disc/pol_MOSFET.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Polarización MOSFET" src="../../img/apartados/semi_disc/pol_MOSFET.png" /></a><br />
+<em>Polarización MOSFET</em></p>
+<p></center></p>
+<p>A continuación vemos definidas las zonas de funcionamiento sobre la curvas caracteerísticas tensión / corriente de un transistor genérico.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/apartados/semi_disc/curvas_mosfet.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Curvas caracteerísticas tensión / corriente" src="../../img/apartados/semi_disc/curvas_mosfet.png" /></a><br />
+<em>Curvas caracteerísticas tensión / corriente</em></p>
+<p></center></p>
+<p>Las zonas de funcionamiento son:</p>
+<ul>
+<li><strong>Corte</strong>. La corriente <span class="arithmatex">\(I_D\)</span> es nula independientemente del valor de <span class="arithmatex">\(V_{DS}\)</span>. A efectos prácticos es el eje horizontal.</li>
+<li><strong>No saturación</strong>. Es la zona definida desde el codo de las curvas hacia la izquierda, es decir cuando la <span class="arithmatex">\(V_{DS}\)</span> está por debajo del valor de saturación. Es una zona de aumento de corriente donde el transistor tiene un comportamiento similar al de una resistencia variable controlada por la tensión de la puerta.</li>
+<li><strong>Saturación</strong>. Corresponde a la zona plana de las curvas con <span class="arithmatex">\(I_D\)</span> constante definida desde el codo de saturación hasta el valor máximo de <span class="arithmatex">\(V_{DS}\)</span> que se conoce como tensión de ruptura y que es propio de cada transistor. En esta zona podemos asimilar el comportamiento del transistor como una fuente de corriente constante controlada por la tensión de puerta.</li>
+</ul>
 
 
 
