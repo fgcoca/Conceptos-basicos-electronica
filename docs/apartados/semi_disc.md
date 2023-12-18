@@ -324,6 +324,35 @@ También las podemos cortar por cualquiera de las líneas existentes entre cada 
 
 </center>
 
+### <FONT COLOR=#AA0000>**Módulo de 8 LED**</font>
+Vamos a explicar brevemente el módulo de 8 LEDs de Freenove que se muestra a continuación:
+
+<center>
+
+![Aspecto del módulo](../img/apartados/semi_disc/neop/8LED_aspecto.png)  
+*Aspecto del módulo*
+
+</center>
+
+El módulo se puede controlar con sólo un pin de datos, como cualquier conjunto de diodos LEDs direccionables. También es posible controlar varios módulos al mismo tiempo. Simplemente conectamos el pin OUT de un módulo al pin IN de otro módulo, lo que nos va a permitir utilizar un pin de datos para controlar 8, 16, 32, ... LEDs.
+
+<center>
+
+![Conexión entre módulos](../img/apartados/semi_disc/neop/conex_modul.png)  
+*Conexión entre módulos*
+
+</center>
+
+El símbolo esquemático será algo similar a lo siguiente:
+
+<center>
+
+![Símbolo](../img/apartados/semi_disc/neop/simb.png)  
+*Símbolo*
+
+</center>
+
+
 ## <FONT COLOR=#007575>El transistor bipolar o BJT</font>
 Las siglas BJT corresponden a Bipolar Junction Transistor, haciendo el término bipolar referencia al hecho de que en la conducción de la corriente intervienen los dos tipos de portadores (electrones y huecos) y Juntion a como está fabricado el dispositivo, que básicamente son dos uniones PN.
 
